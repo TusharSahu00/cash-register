@@ -42,13 +42,11 @@ const message = document.querySelector("#error-message");
 const qtyofnotes = document.querySelectorAll(".numberofnotes");
 const availaibleNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
 checkButton.addEventListener("click", validateBillandCashAmount);
-nextButton.addEventListener("click",hideHtml);
-function hideHtml()
-{
+nextButton.addEventListener("click", hideHtml);
+function hideHtml() {
   if (billAmount.value > 0) {
-  document.getElementsByClassName("hidden")[0].style.display="block";
-  }
-  else{
+    document.getElementsByClassName("hidden")[0].style.display = "block";
+  } else {
     ShowMessage("Amount need to be greater than 0");
   }
 }
@@ -58,7 +56,7 @@ function validateBillandCashAmount() {
   if (billAmount.value > 0) {
     if (Number(cashGiven.value) >= Number(billAmount.value)) {
       const amountToBeReturned = cashGiven.value - billAmount.value;
-      document.getElementsByClassName("hidden")[1].style.display="block";
+      document.getElementsByClassName("hidden")[1].style.display = "block";
       calculteChanges(amountToBeReturned);
     } else {
       ShowMessage("Cash provided need to be equal to the bill amount");
