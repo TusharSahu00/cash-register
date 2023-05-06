@@ -22,12 +22,15 @@
         </p>
         <label for="bill-amount">Bill Amount:</label>
         <input type="text" id="bill-amount">
-        <p id="error-message"></p>
-        <!-- <button id="check">Next</button> -->
-        <label for="cash-given" class="hidden">Cash Given:</label>
+        <p id="error-message"></p>    
+        <button id="next">Next</button>
+
+        <div class="hidden">
+        <label for="cash-given">Cash Given:</label>
         <input type="text" id="cash-given">
-        <button id="check" class="hidden">check</button>
-        <table class="change-table" class="hidden">
+        <button id="check">check</button>
+    </div>
+        <table class="change-table hidden" >
             <caption>Return Change</caption>
             <tr>
                 <th>No. of Notes</th>
